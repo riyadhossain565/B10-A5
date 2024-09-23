@@ -4,14 +4,14 @@ document
   .addEventListener("click", function () {
     const donateMoney = getInputFieldValueById("input-donate-money");
 
-    if (isNaN(donateMoney)) {
-      alert("Failed to added money");
+    if (isNaN(donateMoney) || donateMoney <= 0) {
+      alert("Failed to donate money");
       return;
     } else {
       const donationBalance = getTextFieldValueById("donation-balance");
-      const accountBalance = getTextFieldValueById("account-balance");
+      let accountBalance = getTextFieldValueById("account-balance");
       const newDonationBalance = donationBalance + donateMoney;
-      const newBalance = accountBalance - donateMoney;
+      let newBalance = accountBalance - donateMoney;
 
       document.getElementById("donation-balance").innerText =
         newDonationBalance;
@@ -20,3 +20,25 @@ document
   });
 
 // ---card - 2
+
+document
+  .getElementById("btn-donate-feni")
+  .addEventListener("click", function () {
+    const donateMoneyFeni = getInputFieldValueById("input-donate-feni");
+
+    if (isNaN(donateMoneyFeni) || donateMoneyFeni <= 0) {
+      alert("Failed to donate money");
+      return;
+    } else {
+      const addedBalanceFeni = getTextFieldValueById("added-balance-feni");
+      let accountBalance = getTextFieldValueById("account-balance");
+      const newDonationBalanceFeni = addedBalanceFeni + donateMoneyFeni;
+      let newBalance = accountBalance - donateMoneyFeni;
+
+      document.getElementById("added-balance-feni").innerText =
+        newDonationBalanceFeni;
+      document.getElementById("account-balance").innerText = newBalance;
+    }
+  });
+
+// ---card - 3
