@@ -16,6 +16,7 @@ document
       document.getElementById("donation-balance").innerText =
         newDonationBalance;
       document.getElementById("account-balance").innerText = newBalance;
+      document.getElementById("congrates-modal").showModal();
     }
   });
 
@@ -38,6 +39,7 @@ document
       document.getElementById("added-balance-feni").innerText =
         newDonationBalanceFeni;
       document.getElementById("account-balance").innerText = newBalance;
+      document.getElementById("congrates-modal").showModal();
     }
   });
 
@@ -60,5 +62,6 @@ document
       document.getElementById("added-balance-quota").innerText =
         newDonationBalanceQuota;
       document.getElementById("account-balance").innerText = newBalance;
+      document.getElementById("congrates-modal").showModal();
     }
   });
