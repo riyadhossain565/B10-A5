@@ -42,3 +42,23 @@ document
   });
 
 // ---card - 3
+
+document
+  .getElementById("btn-donate-quota")
+  .addEventListener("click", function () {
+    const donateMoneyQuota = getInputFieldValueById("input-donate-quota");
+
+    if (isNaN(donateMoneyQuota) || donateMoneyQuota <= 0) {
+      alert("Failed to donate money");
+      return;
+    } else {
+      const addedBalanceQuota = getTextFieldValueById("added-balance-quota");
+      let accountBalance = getTextFieldValueById("account-balance");
+      const newDonationBalanceQuota = addedBalanceQuota + donateMoneyQuota;
+      let newBalance = accountBalance - donateMoneyQuota;
+
+      document.getElementById("added-balance-quota").innerText =
+        newDonationBalanceQuota;
+      document.getElementById("account-balance").innerText = newBalance;
+    }
+  });

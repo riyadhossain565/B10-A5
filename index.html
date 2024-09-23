@@ -173,7 +173,12 @@
                 class="flex items-center gap-2 px-4 py-2 rounded-md bg-gray-200"
               >
                 <img src="assets/coin.png" alt="" />
-                <p class="text-lg text-secondary-color">2400</p>
+                <div
+                  id="added-balance-quota"
+                  class="text-lg text-secondary-color"
+                >
+                  2400
+                </div>
                 <span class="text-secondary-color">BDT</span>
               </div>
             </div>
@@ -192,11 +197,15 @@
               their time of need.
             </p>
             <input
+              id="input-donate-quota"
               class="block p-4 font-light w-full my-3 border rounded-md"
               type="text"
               placeholder="Write Donation Amount"
             />
-            <button class="btn w-full bg-primary-color text-lg font-bold">
+            <button
+              id="btn-donate-quota"
+              class="btn w-full bg-primary-color text-lg font-bold"
+            >
               Donate Now
             </button>
           </div>
