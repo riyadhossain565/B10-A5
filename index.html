@@ -60,12 +60,15 @@
         </div>
       </div>
       <div class="flex justify-center gap-3 mt-14 mb-8">
-        <button class="btn btn-lg">Donation</button>
-        <button class="btn btn-lg">History</button>
+        <button id="btn-show-donation" class="btn btn-lg bg-primary-color">
+          Donation
+        </button>
+        <button id="btn-show-history" class="btn btn-lg">History</button>
       </div>
     </header>
     <main>
-      <section class="mb-20">
+      <!-- donation section start -->
+      <section id="donation-section" class="mb-20">
         <!-- card - 1 -->
         <div
           class="grid grid-cols-2 gap-5 w-4/5 mx-auto mb-8 p-6 border rounded-lg shadow-md"
@@ -211,6 +214,14 @@
           </div>
         </div>
       </section>
+      <!-- donation section end -->
+
+      <!-- history section start -->
+      <section id="history-section" class="hidden">
+        <div id="history-container" class="w-3/4 mx-auto space-y-4 mb-6"></div>
+      </section>
+      <!-- history section end -->
+
       <!-- modal -->
       <dialog id="congrates-modal" class="modal">
         <div class="modal-box">
@@ -233,5 +244,6 @@
 
     <script src="js/utilities.js"></script>
     <script src="js/donateMoney.js"></script>
+    <script src="js/features.js"></script>
   </body>
 </html>

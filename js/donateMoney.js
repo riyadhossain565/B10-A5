@@ -17,6 +17,16 @@ document
         newDonationBalance;
       document.getElementById("account-balance").innerText = newBalance;
       document.getElementById("congrates-modal").showModal();
+
+      // added to donation history
+      const dateTime = new Date();
+      const div = document.createElement("div");
+      div.classList.add("border", "p-8", "rounded-xl");
+      div.innerHTML = `
+        <p class="font-bold">${donateMoney} Taka is Donated for Flood Relief in Noakhali,Bangladesh</p>
+        <samp>Date:${dateTime}</samp>
+      `;
+      document.getElementById("history-container").appendChild(div);
     }
   });
 
@@ -40,6 +50,16 @@ document
         newDonationBalanceFeni;
       document.getElementById("account-balance").innerText = newBalance;
       document.getElementById("congrates-modal").showModal();
+
+      // added to donation history
+      const dateTime = new Date();
+      const div = document.createElement("div");
+      div.classList.add("border", "p-8", "rounded-xl");
+      div.innerHTML = `
+        <p class="font-bold">${donateMoneyFeni} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+        <samp>Date:${dateTime}</samp>
+      `;
+      document.getElementById("history-container").appendChild(div);
     }
   });
 
@@ -63,5 +83,16 @@ document
         newDonationBalanceQuota;
       document.getElementById("account-balance").innerText = newBalance;
       document.getElementById("congrates-modal").showModal();
+
+      // added to donation history
+      const dateTime = new Date();
+      const div = document.createElement("div");
+      div.classList.add("border", "p-8", "rounded-xl");
+      div.innerHTML = `
+        <p class="font-bold">${donateMoneyQuota} Taka is Donated for Aid for injured in the Quota Movement, Bangladesh</p>
+        <samp>Date:${dateTime}</samp>
+      `;
+      document.getElementById("history-container").appendChild(div);
+      // p.innerText = `${donateMoneyQuota} Taka is Donated for famine-2024 at Feni, Bangladesh`;
     }
   });
