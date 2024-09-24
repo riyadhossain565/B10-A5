@@ -21,3 +21,7 @@ document
   .addEventListener("click", function () {
     showColorById("btn-show-history");
   });
+
+document.getElementById("btn-blog").addEventListener("click", function () {
+  window.location.href = "/B10-A5/blog.html";
+});

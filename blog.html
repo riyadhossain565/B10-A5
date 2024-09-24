@@ -41,7 +41,27 @@
       }
     </style>
   </head>
-  <body>
+  <body class="lexend-font">
+    <header>
+      <div class="bg-[#f9f7f3]"></div>
+        <div class="lg:container mx-auto py-8">
+          <div class="flex justify-between items-center mx-5">
+            <button id="btn-home" class="btn bg-primary-color px-7 text-lg">
+              Home
+            </button>
+            <div class="flex items-center justify-center gap-3">
+              <img src="assets/logo.png" alt="" />
+              <h3 class="text-xl font-bold">Donate Bangladesh</h3>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <img src="assets/coin.png" alt="" />
+              <div id="account-balance" class="text-lg">5500</div>
+              <span>BDT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section>
         <div>
@@ -89,5 +109,10 @@
         </div>
       </section>
     </main>
+    <script>
+      document.getElementById("btn-home").addEventListener("click", function () {
+        window.location.href = "/B10-A5/index.html";
+});
+    </script>
   </body>
 </html>

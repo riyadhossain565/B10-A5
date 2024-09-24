@@ -39,14 +39,23 @@
       .lexend-font {
         font-family: "Lexend", sans-serif;
       }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        backdrop-filter: blur(10px);
+      }
     </style>
   </head>
   <body class="lexend-font">
-    <header class="">
+    <header id="header-section">
       <div class="bg-[#f9f7f3]">
         <div class="lg:container mx-auto py-8">
           <div class="flex justify-between items-center mx-5">
-            <button class="btn bg-primary-color px-7 text-lg">Blog</button>
+            <button id="btn-blog" class="btn bg-primary-color px-7 text-lg">
+              Blog
+            </button>
             <div class="flex items-center justify-center gap-3">
               <img src="assets/logo.png" alt="" />
               <h3 class="text-xl font-bold">Donate Bangladesh</h3>
@@ -245,5 +254,21 @@
     <script src="js/utilities.js"></script>
     <script src="js/donateMoney.js"></script>
     <script src="js/features.js"></script>
+
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+      const header = document.getElementById("header-section");
+      const sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
   </body>
 </html>
