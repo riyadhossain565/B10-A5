@@ -63,47 +63,79 @@
       </div>
     </header>
     <main>
-      <section>
-        <div>
+      <section class="w-4/5 mx-auto">
+        <div class="flex items-center">
           <h1 class="text-4xl font-bold my-8 ml-12">Important FAQ</h1>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke-width="1.5" 
+            stroke="currentColor" 
+            class="w-9 ml-2 mb-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+          </svg>
+          
         </div>
         <div>
-          <div class="collapse collapse-arrow bg-base-200">
+          <div class="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">
               What is the Document Object Model(DOM)?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                Document Object Model(DOM) is a programming interface for web pages. 
+                It give access to all the HTML elements and developer can change the elements, 
+                add new elements and remove elements. It makes HTML elements as a tree of objects.
+                So the DOM is very essential for web development it allows dynamic interaction of web pages in real-time.
+              </p>
             </div>
           </div>
-          <div class="collapse collapse-arrow bg-base-200">
+          <div class="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">
               How do you select an element from the DOM?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                There are many methods in javascript that helps to select elements from the DOM.
+                The most common methods are getElementById(), getElementsByTagName(), 
+                getElementsByClassName(), querySelector(), querySelectorAll().
+              </p>
             </div>
           </div>
-          <div class="collapse collapse-arrow bg-base-200">
+          <div class="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">
               What is event delegation in the context of the DOM, and Why is it
               useful?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                Event delegation is basically handle events in the Dom.
+                Events can be added to a parent element instead of adding to every single element.
+                <br>
+                It reduces the number of event listeners in the code, 
+                improves performance, simplifies code management.
+              </p>
             </div>
           </div>
-          <div class="collapse collapse-arrow bg-base-200">
+          <div class="collapse collapse-arrow bg-base-200 mb-10">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">
               How do you manipulate an element's attributes and styles using the
               DOM?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                To manipulate an element's attributes, we can use getAttribute(),
+                setAttribute(), removeAttribute() or directly modify properties like 
+                id, class etc.
+                <br>
+                we can modify inline styles by using "style" property or use classList to mange css classes.
+
+              </p>
             </div>
           </div>
         </div>
