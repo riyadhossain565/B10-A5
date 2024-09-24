@@ -4,7 +4,11 @@ document
   .addEventListener("click", function () {
     const donateMoney = getInputFieldValueById("input-donate-money");
 
-    if (isNaN(donateMoney) || donateMoney <= 0) {
+    if (
+      isNaN(donateMoney) ||
+      donateMoney <= 0 ||
+      parseFloat(donateMoney) > parseFloat(accountBalance)
+    ) {
       alert("Failed to donate money");
       return;
     } else {
@@ -37,7 +41,11 @@ document
   .addEventListener("click", function () {
     const donateMoneyFeni = getInputFieldValueById("input-donate-feni");
 
-    if (isNaN(donateMoneyFeni) || donateMoneyFeni <= 0) {
+    if (
+      isNaN(donateMoneyFeni) ||
+      donateMoneyFeni <= 0 ||
+      parseFloat(donateMoney) > parseFloat(accountBalance)
+    ) {
       alert("Failed to donate money");
       return;
     } else {
@@ -70,7 +78,11 @@ document
   .addEventListener("click", function () {
     const donateMoneyQuota = getInputFieldValueById("input-donate-quota");
 
-    if (isNaN(donateMoneyQuota) || donateMoneyQuota <= 0) {
+    if (
+      isNaN(donateMoneyQuota) ||
+      donateMoneyQuota <= 0 ||
+      parseFloat(donateMoney) > parseFloat(accountBalance)
+    ) {
       alert("Failed to donate money");
       return;
     } else {
